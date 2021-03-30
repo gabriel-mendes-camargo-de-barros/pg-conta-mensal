@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contas Mensais</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/main.css">
+</head>
+
+<body>
+  <header>
+    <h2>Calcular Contas</h2>
+  </header>
+  <main>
+    <fieldset class="contas">
+      <h3>contas domésticas: </h3>
+      <label for="luz">Luz: </label>
+      <input id="luz" name="luz" type="number">
+      <label for="agua">Água: </label>
+      <input id="agua" name="agua" type="number">
+      <label for="internet">Internet: </label>
+      <input id="internet" name="internet" type="number">
+      <label for="telefone">Telefone: </label>
+      <input id="telefone" name="telefone" type="number">
+      <label for="tv">TV: </label>
+      <input id="tv" name="tv" type="number">
+
+      <button type="button" onClick="calculaContasDomesticas()">Calcular</button>
+    </fieldset>
+  </main>
+
+  <script src="../scripts/index.js"></script>
+</body>
+</html>
