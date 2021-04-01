@@ -7,28 +7,47 @@ function calculaContasDomesticas() {
 
   const totalContasDomesticas = luz + agua + internet + telefone + tv
 
-  alert(totalContasDomesticas)
+  document.getElementById("bills").innerHTML = totalContasDomesticas
 }
 
 let billNumber = 0
 function createNewBill() {
-  let bills = document.querySelector('.bills'),
+  let bills = document.querySelector('#bills'),
     HTMLTemporario = bills.innerHTML,
-    HTMLNovo = `<label>Digite a nova conta</label></br><input id="conta${billNumber}" type=text />`;
+    HTMLNovo = `
+    <table>
+      <tr>
+        <th>
+          Digite a nova conta
+        </th>
+        <th>
+          Digite o valor da conta
+        </th>
+      </tr>
+      <tr>
+        <td>
+          <input id="conta${billNumber}" type="text" />
+        </td>
+        <td>
+          <input id="valorConta${billNumber}" type="number" />
+        </td>
+      </tr>
+    </table>`;
 
   HTMLTemporario = HTMLTemporario + HTMLNovo;
   bills.innerHTML = HTMLTemporario;
   billNumber++
+  
+  console.log(billNumber)
 }
 
 function calculateAllBills() {
-  let totalOfBill;
   let valor = 0;
-  for( let i = 0; i <= 1;) {
-    id = `conta${i}`;
-    valor += Number(document.getElementById(id).value)
-    i++
+  for( let i = 0; i < billNumber; i++) {
+    let id = `valorConta${i}`;
     console.log(id)
+    valor = valor + Number(document.getElementById(id).value)
+    console.log(valor)
   }
   alert(valor)
 }
