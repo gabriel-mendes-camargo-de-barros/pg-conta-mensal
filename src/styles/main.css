@@ -1,26 +1,34 @@
+/* o *(asteristico) serve pra marcar todos os elementos */
 * {
   margin: 0;
   padding: 0;
 
-  font-family: 'Heebo', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 1rem;
 
+  /* serve pra fazer as marcações de espaçamento pela borda,
+  o padrão é pelo conteúdo filho */
   box-sizing: border-box;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 600;
+  font-weight: 400;
+  font-family: 'Roboto', sans-serif;
 }
 
 a {
   text-decoration: none;
 }
 
+button:focus {
+  transition: 1500;
+}
+
 body {
   width: 100vw;
   height: 100vh;
 
-  background-color: rgb(233, 225, 215);
+  background-color: #c4c4c4;
 
   display: flex;
   flex-direction: column;
@@ -28,12 +36,240 @@ body {
   align-items: center;
 }
 
-.contas {
+.page-header {
+  width: 100%;
+  height: 4rem;
+
+  margin-top: 3rem;
+  padding-left: 6rem;
+
+  background-color: #e5e5e5;
+
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.page-header .page-title {
+  font-size: 2.2rem;
+}
+
+.main {
+  width: 100%;
+  height: 100%;
+
+  padding-left: 3rem;
+  margin-top: 1.5rem;
+
+  /* background-color: #fff; */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: left;
+}
+
+.main .navigation {
+  width: 100%;
+  height: 3rem;
+
+  padding-left: 3rem;
+
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.main .navigation .nav-list {
+  width: 100%;
+  height: 4rem;
+
+  max-width: 65%;
+
+  /* background-color: #fff; */
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main .navigation .nav-list li {
+  list-style: none;
+
+  font-size: 1.6rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+
+.main .navigation .nav-list li * {
+  font-size: 1.6rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+
+  background-color: #c4c4c4;
+
+  border: 0;
+
+  transition: 5;
+}
+
+.main .navigation .nav-list li *:hover {
+  font-size: 1.8rem;
+}
+
+.main .navigation .nav-list li *:focus {
+  outline: none;
+}
+
+.main fieldset {
+  width: 100%;
+
+  padding-right: 3rem;
+  border: 0;
+
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main fieldset .bills {
+  width: 70%;
+  height: 25rem;
+
+  border: 0;
+  border-radius: 0.8rem;
+
+  background-color: #e5e5e5;
+
+  margin-top: 2rem;
+
+  /* Barra de rolagem */
+  overflow: auto; 
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main fieldset .bills .values {
+  width: 30rem;
+  height: 25rem;
+
+  margin: 2rem 0;
+  padding: 2rem 3rem;
+
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-gap: 2rem;
+}
+
+.main fieldset .bills .values label,
+.main fieldset .bills .create-bill .create-bill-form label {
+  height: 2.5rem;
+
+  font-size: 1.3rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main fieldset .bills .values input,
+.main fieldset .bills .create-bill .create-bill-form input {
+  width: 8rem;
+  height: 2.5rem;
+
+  background-color: #c4c4c4;
+
+  font-size: 1.2rem;
+
+  border: 0;
+  border-radius: 0.4rem;
+
+  padding-left: 1.2rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main fieldset .bills .create-bill .create-bill-form {
+  width: 30rem;
+  height: 25rem;
+
+  margin-top: 2rem;
+  padding: 2rem 3rem;
+
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-column-gap: 2rem;
+}
+
+.main fieldset .bills .create-bill .create-bill-form input {
+  width: 13rem;
+}
+
+.main fieldset .bills .create-bill button {
   width: 15rem;
-  height: 20rem;
+  height: 4rem;
+
+  position: absolute;
+  right: 28rem;
+  bottom: 3rem;
+
+  background-color: #c4c4c4;
+
+  font-size: 1.8rem;
+
+  border: 0;
+  border-radius: 0.4rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main fieldset .options {
+  width: 28.5%;
+  height: 24rem;
+  margin-top: 2rem;
 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: left;
+  align-items: center;
+
+}
+
+.main fieldset .options .buttons {
+  width: 100%;
+  height: 4rem;
+
+  background-color: #ffffff;
+
+  border: 0;
+  border-radius: 0.8rem;
+
+  font-size: 1.5rem;
+
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+}
+
+.main fieldset .options .result {
+  width: 100%;
+  height: 13rem;
+
+  background-color: #ffffff;
+
+  border: 0;
+  border-radius: 0.8rem;
+
+  font-size: 2rem;
+  color: #3b3737;
+
+  display: flex; 
+  justify-content: center;
+  align-items: center;
 }
