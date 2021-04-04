@@ -6,41 +6,112 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contas Mensais</title>
+
+  <!-- chama a fonte importada do site do google fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <!-- chama o arquivo css -->
   <link rel="stylesheet" href="../styles/main.css">
 </head>
 
 <body>
-  <header>
-    <h2>Calcular Contas</h2>
+  <header class="page-header">
+    <h2 class="page-title">Orçamento Familiar</h2>
   </header>
-  <main>
-    <fieldset class="contas">
-      <h3>contas domésticas: </h3>
-      <label for="luz">Luz: </label>
-      <input id="luz" name="luz" type="number">
-      <label for="agua">Água: </label>
-      <input id="agua" name="agua" type="number">
-      <label for="internet">Internet: </label>
-      <input id="internet" name="internet" type="number">
-      <label for="telefone">Telefone: </label>
-      <input id="telefone" name="telefone" type="number">
-      <label for="tv">TV: </label>
-      <input id="tv" name="tv" type="number">
+  <main class="main">
+    <nav class="navigation">
+      <ul class="nav-list">
+        <li><button class="link-button" type="button" onClick="openHomeBillsPage()">Casa</button></li>
+        <li>Alimentação</li>
+        <li>Educação</li>
+        <li><button class="link-button" type="button" onClick="openHealthBillsPage()">Saúde</button></li>
+        <li><button class="link-button" type="button" onClick="openLazerBillsPage()">Lazer</button></li>
+        <li>Veículo</li>
+      </ul>
+    </nav>
 
-      <button type="button" onClick="calculaContasDomesticas()">Calcular</button>
-    </fieldset>
-    <fieldset class="teste-de-funcionalidades">
-      <button type="button" onClick="createNewBill()" >Nova Conta</button>
-      <div id="bills">
-
+    <!-- pagina de casa -->
+    <fieldset class="page" id="home">
+      <div class="bills">
+        <div class="values home-values">
+          <label for="luz">Luz: </label>
+          <input id="luz" name="luz" type="number">
+          <label for="agua">Água: </label>
+          <input id="agua" name="agua" type="number">
+          <label for="internet">Internet: </label>
+          <input id="internet" name="internet" type="number">
+          <label for="telefone">Telefone: </label>
+          <input id="telefone" name="telefone" type="number">
+          <label for="tv">TV: </label>
+          <input id="tv" name="tv" type="number">
+        </div>
+        <div class="create-bill">
+          <button type="button" onClick="createNewHomeBill()">Adicionar</button>
+          <div class="create-bill-form">
+            <label>Digite a nova conta:</label>
+            <input id="new-home-bill" type="text" />
+          </div>
+        </div>
       </div>
-      <button type="button" onClick="calculateAllBills()">Calcular</button>
+      <div class="options">
+        <button class="buttons" type="button" onClick="">Calcular Total</button>
+        <button class="buttons" type="button" onClick="calculateAllHomeBills()">Calcular</button>
+        <div class="result home-result"></div>
+      </div>
+    </fieldset>
+
+    <!-- pagina de saude -->
+    <fieldset class="page" id="health">
+      <div class="bills">
+        <div class="values health-values">
+          <label for="plano">Plano de Saúde: </label>
+          <input id="plano" name="plano" type="number">
+          <label for="exames">Exames: </label>
+          <input id="exames" name="exames" type="number">
+          <label for="farmacia">Farmácia: </label>
+          <input id="farmacia" name="farmacia" type="number">
+        </div>
+        <div class="create-bill">
+          <button type="button" onClick="createNewHealthBill()">Adicionar</button>
+          <div class="create-bill-form">
+            <label>Digite a nova conta:</label>
+            <input id="new-health-bill" type="text" />
+          </div>
+        </div>
+      </div>
+      <div class="options">
+        <button class="buttons" type="button" onClick="">Calcular Total</button>
+        <button class="buttons" type="button" onClick="calculateAllHealthBills()">Calcular</button>
+        <div class="result health-result"></div>
+      </div>
+    </fieldset>
+
+    <!-- pagina de lazer -->
+    <fieldset class="page" id="lazer">
+      <div class="bills">
+        <div class="values lazer-values">
+          <label for="viagem">Viagem: </label>
+          <input id="viagem" name="viagem" type="number">
+        </div>
+        <div class="create-bill">
+          <button type="button" onClick="createNewLazerBill()">Adicionar</button>
+          <div class="create-bill-form">
+            <label>Digite a nova conta:</label>
+            <input id="new-lazer-bill" type="text" />
+          </div>
+        </div>
+      </div>
+      <div class="options">
+        <button class="buttons" type="button" onClick="">Calcular Total</button>
+        <button class="buttons" type="button" onClick="calculateAllLazerBills()">Calcular</button>
+        <div class="result lazer-result"></div>
+      </div>
     </fieldset>
   </main>
 
-  <script src="../scripts/index.jsx"></script>
+  <!-- chama o arquivo js (javascript) -->
+  <script src="../scripts/index.js"></script>
 </body>
 
 </html>
