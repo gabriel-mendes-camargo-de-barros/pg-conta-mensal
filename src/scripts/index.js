@@ -19,6 +19,13 @@ function openLazerBillsPage() {
   document.querySelector("#lazer").style.display = "flex";
 }
 
+function bildGrafic() {
+  document.querySelector("#home").style.display = "none";
+  document.querySelector("#health").style.display = "none";
+  document.querySelector("#lazer").style.display = "none";
+  document.querySelector(".grafic").style.display = "flex";
+}
+
 ///*/*/*/*/*/*/* cria nova conta na pagina
 
 
@@ -110,3 +117,50 @@ function calculateAllHealthBills() {
 }
 
 // calcula o total de todas as paginas
+
+
+// constroi o grafico
+Highcharts.chart('container', {
+  chart: {
+    type: 'bar'
+  },
+  title: {
+    text: 'Contas Mensais'
+  },
+  xAxis: {
+    categories: ['Total', 'Casa', 'Alimentação', 'Educação', 'Saúde', 'Lazer', 'Veículo']
+  },
+  yAxis: {
+    min: 0,
+    title: {
+      text: 'Valor Total das Contas'
+    }
+  },
+  legend: {
+    reversed: true
+  },
+  plotOptions: {
+    series: {
+      stacking: 'normal'
+    }
+  },
+  series: [{
+    name: 'Casa',
+    data: [5, 5]
+  }, {
+    name: 'Alimentação',
+    data: [3, 0, 3]
+  }, {
+    name: 'Educação',
+    data: [2, 0, 0, 2]
+  }, {
+    name: 'Saúde',
+    data: [3, 0, 0, 0, 3]
+  }, {
+    name: 'Lazer',
+    data: [3, 0, 0, 0, 0, 3]
+  }, {
+    name: 'Veículo',
+    data: [2, 0, 0, 0, 0, 0, 2]
+  }]
+});
