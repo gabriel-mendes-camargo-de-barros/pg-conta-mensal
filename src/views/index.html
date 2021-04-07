@@ -23,11 +23,11 @@
     <nav class="navigation">
       <ul class="nav-list">
         <li><button class="link-button" type="button" onClick="openHomeBillsPage()">Casa</button></li>
-        <li>Alimentação</li>
-        <li>Educação</li>
+        <li><button class="link-button" type="button" onClick="openFoodBillsPage()">Alimentação</button></li>
+        <li><button class="link-button" type="button" onClick="openEducationBillsPage()">Educação</button></li>
         <li><button class="link-button" type="button" onClick="openHealthBillsPage()">Saúde</button></li>
         <li><button class="link-button" type="button" onClick="openLazerBillsPage()">Lazer</button></li>
-        <li>Veículo</li>
+        <li><button class="link-button" type="button" onClick="openCarBillsPage()">Veiculo</button></li>
       </ul>
     </nav>
 
@@ -55,7 +55,7 @@
         </div>
       </div>
       <div class="options">
-        <button class="buttons" type="button" onClick="">Calcular Total</button>
+        <button class="buttons" type="button" onClick="bildGrafic()">Calcular Total</button>
         <button class="buttons" type="button" onClick="calculateAllHomeBills()">Calcular</button>
         <div class="result home-result"></div>
       </div>
@@ -81,7 +81,7 @@
         </div>
       </div>
       <div class="options">
-        <button class="buttons" type="button" onClick="">Calcular Total</button>
+        <button class="buttons" type="button" onClick="bildGrafic()">Calcular Total</button>
         <button class="buttons" type="button" onClick="calculateAllHealthBills()">Calcular</button>
         <div class="result health-result"></div>
       </div>
@@ -103,14 +103,91 @@
         </div>
       </div>
       <div class="options">
-        <button class="buttons" type="button" onClick="">Calcular Total</button>
+        <button class="buttons" type="button" onClick="bildGrafic()">Calcular Total</button>
         <button class="buttons" type="button" onClick="calculateAllLazerBills()">Calcular</button>
         <div class="result lazer-result"></div>
       </div>
     </fieldset>
+
+    <!-- Pagina Educação-->
+    <fieldset class="page" id="education">
+        <div class="bills">
+          <div class="values education-values">
+            <label for="Escola"> Escola </label>
+            <input id="Escola" name="Escola" type="number">
+          </div>
+          <div class="create-bill">
+            <button type="button" onClick="createNewEducationBill()">Adicionar</button>
+            <div class="create-bill-form">
+              <label>Digite a nova conta:</label>
+              <input id="new-educação-bill" type="text" />
+            </div>
+          </div>
+        </div>
+        <div class="options">
+          <button class="buttons" type="button" onClick="bildGrafic()"> Calcular Total </button>
+          <button class="buttons" type="button" onClick="calculateAllEducationBills()"> Calcular </button>
+          <div class="result education-result"> </div>
+        </div>
+    </fieldset>
+
+    <!-- Pagina Alimentação -->
+    <fieldset class="page" id="food">
+      <div class="bills">
+        <div class="values food-values">
+          <label for="Gás"> Gás </label>
+          <input id="Gás" name="Gás" type="number">
+        </div>
+        <div class="create-bill">
+          <button type="button" onClick="createNewFoodBill()">Adicionar</button>
+          <div class="create-bill-form">
+            <label>Digite a nova conta:</label>
+            <input id="new-food-bill" type="text">
+          </div>
+        </div>
+      </div>
+      <div class="options">
+        <button class="buttons" type="button" onClick="bildGrafic()"> Calcular Total </button>
+        <button class="buttons" type="button" onClick="calculateAllFoodBills()"> Calcular </button>
+        <div class="result food-result"> </div>  
+      </div>
+    </fieldset>
+
+    <!-- Pagina Veiculo -->
+    <fieldset class="page" id="car">
+      <div class="bills">
+        <div class="values car-values">
+          <label for="Carro"> Carro </label>
+          <input id="Carro" name="Carro" type="number">
+        </div>
+        <div class="create-bill">
+          <button type="button" onClick="createNewCarBill()">Adicionar</button>
+          <div class="create-bill-form">
+            <label>Digite a nova conta:</label>
+            <input id="new-car-bill" type="text">
+          </div>
+        </div>
+      </div>
+      <div class="options">
+        <button class="buttons" type="button" onClick="bildGrafic()"> Calcular Total </button>
+        <button class="buttons" type="button" onClick="calculateAllCarBills()"> Calcular </button>
+        <div class="result car-result"> </div>  
+      </div>
+    </fieldset>
+
+    <fieldset class="page" id="grafic">
+      <figure class="highcharts-figure">
+        <div id="container"></div>
+      </figure>
+    </fieldset>
   </main>
 
   <!-- chama o arquivo js (javascript) -->
+  
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/modules/exporting.js"></script>
+  <script src="https://code.highcharts.com/modules/export-data.js"></script>
+  <script src="https://code.highcharts.com/modules/accessibility.js"></script>
   <script src="../scripts/index.js"></script>
 </body>
 
