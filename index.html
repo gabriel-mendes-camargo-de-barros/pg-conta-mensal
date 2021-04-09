@@ -47,17 +47,19 @@
           <input id="tv" name="tv" type="number">
         </div>
         <div class="create-bill">
-          <button type="button" onClick="createNewHomeBill()">Adicionar</button>
           <div class="create-bill-form">
             <label>Digite a nova conta:</label>
             <input id="new-home-bill" type="text" />
           </div>
+          <button type="button" onClick="createNewHomeBill()">Adicionar</button>
         </div>
       </div>
       <div class="options">
         <button class="buttons" type="button" onClick="bildGrafic()">Calcular Total</button>
         <button class="buttons" type="button" onClick="calculateAllHomeBills()">Calcular</button>
-        <div class="result home-result"></div>
+        <div class="result home-result">
+          <label>Resultado</label>
+        </div>
       </div>
     </fieldset>
 
@@ -73,17 +75,19 @@
           <input id="farmacia" name="farmacia" type="number">
         </div>
         <div class="create-bill">
-          <button type="button" onClick="createNewHealthBill()">Adicionar</button>
           <div class="create-bill-form">
             <label>Digite a nova conta:</label>
             <input id="new-health-bill" type="text" />
           </div>
+          <button type="button" onClick="createNewHealthBill()">Adicionar</button>
         </div>
       </div>
       <div class="options">
         <button class="buttons" type="button" onClick="bildGrafic()">Calcular Total</button>
         <button class="buttons" type="button" onClick="calculateAllHealthBills()">Calcular</button>
-        <div class="result health-result"></div>
+        <div class="result health-result">
+          <label>Resultado</label>
+        </div>
       </div>
     </fieldset>
 
@@ -95,17 +99,19 @@
           <input id="viagem" name="viagem" type="number">
         </div>
         <div class="create-bill">
-          <button type="button" onClick="createNewLazerBill()">Adicionar</button>
           <div class="create-bill-form">
             <label>Digite a nova conta:</label>
             <input id="new-lazer-bill" type="text" />
           </div>
+          <button type="button" onClick="createNewLazerBill()">Adicionar</button>
         </div>
       </div>
       <div class="options">
         <button class="buttons" type="button" onClick="bildGrafic()">Calcular Total</button>
         <button class="buttons" type="button" onClick="calculateAllLazerBills()">Calcular</button>
-        <div class="result lazer-result"></div>
+        <div class="result lazer-result">
+          <label>Resultado</label>
+        </div>
       </div>
     </fieldset>
 
@@ -117,17 +123,19 @@
             <input id="Escola" name="Escola" type="number">
           </div>
           <div class="create-bill">
-            <button type="button" onClick="createNewEducationBill()">Adicionar</button>
             <div class="create-bill-form">
               <label>Digite a nova conta:</label>
               <input id="new-educação-bill" type="text" />
             </div>
+            <button type="button" onClick="createNewEducationBill()">Adicionar</button>
           </div>
         </div>
         <div class="options">
           <button class="buttons" type="button" onClick="bildGrafic()"> Calcular Total </button>
           <button class="buttons" type="button" onClick="calculateAllEducationBills()"> Calcular </button>
-          <div class="result education-result"> </div>
+          <div class="result education-result">
+            <label>Resultado</label>
+          </div>
         </div>
     </fieldset>
 
@@ -139,17 +147,19 @@
           <input id="Gás" name="Gás" type="number">
         </div>
         <div class="create-bill">
-          <button type="button" onClick="createNewFoodBill()">Adicionar</button>
           <div class="create-bill-form">
             <label>Digite a nova conta:</label>
             <input id="new-food-bill" type="text">
           </div>
+          <button type="button" onClick="createNewFoodBill()">Adicionar</button>
         </div>
       </div>
       <div class="options">
         <button class="buttons" type="button" onClick="bildGrafic()"> Calcular Total </button>
         <button class="buttons" type="button" onClick="calculateAllFoodBills()"> Calcular </button>
-        <div class="result food-result"> </div>  
+        <div class="result food-result">
+          <label>Resultado</label>
+        </div>  
       </div>
     </fieldset>
 
@@ -161,21 +171,24 @@
           <input id="Carro" name="Carro" type="number">
         </div>
         <div class="create-bill">
-          <button type="button" onClick="createNewCarBill()">Adicionar</button>
           <div class="create-bill-form">
             <label>Digite a nova conta:</label>
             <input id="new-car-bill" type="text">
           </div>
+          <button type="button" onClick="createNewCarBill()">Adicionar</button>
         </div>
       </div>
       <div class="options">
         <button class="buttons" type="button" onClick="bildGrafic()"> Calcular Total </button>
         <button class="buttons" type="button" onClick="calculateAllCarBills()"> Calcular </button>
-        <div class="result car-result"> </div>  
+        <div class="result car-result">
+          <label>Resultado</label>
+        </div>  
       </div>
     </fieldset>
 
-    <fieldset class="page" id="grafic">
+    <!-- página do gráfico -->
+    <fieldset class="page grafic" id="grafic">
       <figure class="highcharts-figure">
         <div id="container"></div>
       </figure>
