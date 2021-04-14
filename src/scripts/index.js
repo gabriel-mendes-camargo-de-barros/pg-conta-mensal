@@ -8,6 +8,7 @@ function openHealthBillsPage() {
   document.querySelector("#food").style.display = "none";
   document.querySelector("#car").style.display = "none";
   document.querySelector("#grafic").style.display = "none";
+  document.querySelector("#developers").style.display = "none";
   document.querySelector("#health").style.display = "flex";
 }
 
@@ -18,6 +19,7 @@ function openHomeBillsPage() {
   document.querySelector("#food").style.display = "none";
   document.querySelector("#car").style.display = "none";
   document.querySelector("#grafic").style.display = "none";
+  document.querySelector("#developers").style.display = "none";
   document.querySelector("#home").style.display = "flex";
 }
 
@@ -28,6 +30,7 @@ function openLazerBillsPage() {
   document.querySelector("#food").style.display = "none";
   document.querySelector("#car").style.display = "none";
   document.querySelector("#grafic").style.display = "none";
+  document.querySelector("#developers").style.display = "none";
   document.querySelector("#lazer").style.display = "flex";
 }
 
@@ -38,6 +41,7 @@ function openEducationBillsPage(){
   document.querySelector("#food").style.display = "none";
   document.querySelector("#car").style.display = "none";
   document.querySelector("#grafic").style.display = "none";
+  document.querySelector("#developers").style.display = "none";
   document.querySelector("#education").style.display = "flex";
 }
 
@@ -48,6 +52,7 @@ function openFoodBillsPage(){
   document.querySelector("#education").style.display = "none";
   document.querySelector("#car").style.display = "none";
   document.querySelector("#grafic").style.display = "none";
+  document.querySelector("#developers").style.display = "none";
   document.querySelector("#food").style.display = "flex";
 }
 
@@ -58,6 +63,7 @@ function openCarBillsPage(){
   document.querySelector("#education").style.display = "none";
   document.querySelector("#food").style.display = "none";
   document.querySelector("#grafic").style.display = "none";
+  document.querySelector("#developers").style.display = "none";
   document.querySelector("#car").style.display = "flex";
 }
 
@@ -68,9 +74,21 @@ function bildGrafic() {
   document.querySelector("#education").style.display = "none";
   document.querySelector("#food").style.display = "none";
   document.querySelector("#car").style.display = "none";
+  document.querySelector("#developers").style.display = "none";
   document.querySelector("#grafic").style.display = "flex";
 
   calculateAllBills()
+}
+
+function openDevelopersPage(){
+  document.querySelector("#home").style.display = "none";
+  document.querySelector("#health").style.display = "none";
+  document.querySelector("#lazer").style.display = "none";
+  document.querySelector("#education").style.display = "none";
+  document.querySelector("#food").style.display = "none";
+  document.querySelector("#grafic").style.display = "none";
+  document.querySelector("#developers").style.display = "flex";
+  document.querySelector("#car").style.display = "none";
 }
 ///*/*/*/*/*/*/* cria nova conta na pagina
 
