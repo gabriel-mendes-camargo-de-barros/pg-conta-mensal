@@ -25,10 +25,10 @@ button:focus {
 }
 
 body {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
 
-  background-color: #c4c4c4;
+  background-color: var(--cor1);
 
   display: flex;
   flex-direction: column;
@@ -94,16 +94,16 @@ body {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
 
-  background-color: #c4c4c4;
+  background-color: var(--cor1);
 
   border: 0;
 
   transition: 5;
 }
 
-.main .navigation .nav-list li *:hover {
+/*.main .navigation .nav-list li *:hover {
   font-size: 1.3rem;
-}
+}*/
 
 .main .navigation .nav-list li *:focus {
   outline: none;
@@ -114,7 +114,7 @@ body {
 
   border: 0;
 
-  margin-top: 2rem;
+  margin-top: 0rem;
 
   display: none;
   flex-direction: column;
@@ -147,7 +147,7 @@ body {
   border: 0;
   border-radius: 0.8rem;
 
-  background-color: #e5e5e5;
+  background-color: var(--cor7);
 
   margin: 2rem 0;
 
@@ -183,7 +183,7 @@ body {
   width: 8rem;
   height: 1.8rem;
 
-  background-color: #c4c4c4;
+  background-color: var(--cor1);
 
   font-size: 1.2rem;
 
@@ -218,7 +218,7 @@ body {
 
   margin: 0 auto 2rem;
 
-  background-color: #c4c4c4;
+  background-color: var(--cor3);
 
   font-size: 1.4rem;
 
@@ -228,6 +228,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  cursor: pointer;
+
+  color: var(--cor-Branca);
 }
 
 .main fieldset .options {
@@ -247,7 +251,7 @@ body {
   width: 100%;
   height: 3rem;
 
-  background-color: #ffffff;
+  background-color: var(--cor3);
 
   border: 0;
   border-radius: 0.8rem;
@@ -257,19 +261,23 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  cursor: pointer;
+
+  color: var(--cor-Branca);
 }
 
 .main fieldset .options .result {
   width: 100%;
   height: 13rem;
 
-  background-color: #ffffff;
+  background-color: var(--cor2);
 
   border: 0;
   border-radius: 0.8rem;
 
   font-size: 2rem;
-  color: #3b3737;
+  color:var(--cor3);
 
   display: flex;
   justify-content: center;
@@ -289,7 +297,7 @@ body {
 .highcharts-data-table table {
   font-family: Verdana, sans-serif;
   border-collapse: collapse;
-  border: 1px solid #EBEBEB;
+  border: 1px solid var(--cor2);
   margin: 10px auto;
   text-align: center;
   min-width: 420px;
@@ -299,7 +307,7 @@ body {
 .highcharts-data-table caption {
   padding: 1em 0;
   font-size: 1.2em;
-  color: #555;
+  color: var(--cor3);
 }
 .highcharts-data-table th {
   font-weight: 600;
@@ -309,10 +317,10 @@ body {
   padding: 0.5em;
 }
 .highcharts-data-table thead tr, .highcharts-data-table tr:nth-child(even) {
-  background: #f8f8f8;
+  background: var(--cor4);
 }
 .highcharts-data-table tr:hover {
-  background: #f1f7ff;
+  background: var(--cor5);
 }
 
 @media(min-width: 600px){
@@ -331,10 +339,10 @@ body {
   .page-header {
     height: 4rem;
 
-    margin-top: 3rem;
+    margin-top: 2rem;
     padding-left: 6rem;
 
-    background-color: #e5e5e5;
+    background-color: var(--cor7);
 
     display: flex;
     justify-content: left;
@@ -366,7 +374,11 @@ body {
   }
 
   .main .navigation .nav-list li *:hover {
-    font-size: 1.6rem;
+    /*font-size: 1.6rem;*/
+    transform: scale(1.3);
+    /*usando transform: scale() as demais li nao se mexem*/
+    cursor: pointer;
+
   }
 
   .main fieldset {
@@ -408,7 +420,7 @@ body {
     width: 8rem;
     height: 2.5rem;
 
-    background-color: #c4c4c4;
+    background-color:var(--cor2);
 
     font-size: 1.2rem;
 
@@ -463,7 +475,7 @@ body {
 
   .main fieldset .options .result {
     height: 13rem;
-
+    
     font-size: 2rem;
   }
 
@@ -480,7 +492,7 @@ body {
   .highcharts-data-table table {
     font-family: Verdana, sans-serif;
     border-collapse: collapse;
-    border: 1px solid #EBEBEB;
+    border: 1px solid var(--cor2);
     margin: 10px auto;
     text-align: center;
     width: 100%;
@@ -490,7 +502,7 @@ body {
   .highcharts-data-table caption {
     padding: 1em 0;
     font-size: 1.2em;
-    color: #555;
+    color: var(--cor3);
   }
   .highcharts-data-table th {
     font-weight: 600;
@@ -500,10 +512,10 @@ body {
     padding: 0.5em;
   }
   .highcharts-data-table thead tr, .highcharts-data-table tr:nth-child(even) {
-    background: #f8f8f8;
+    background: var(--cor4);
   }
   .highcharts-data-table tr:hover {
-    background: #f1f7ff;
+    background:var(--cor5);
   }
 }
 
